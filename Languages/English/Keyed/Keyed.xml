@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <AT.AutoTame>Auto tame</AT.AutoTame>
+  <AT.AutoTrain>Auto train</AT.AutoTrain>
+  <AT.AutoTameDesc>Auto tame prevents training decay.</AT.AutoTameDesc>
+  <AT.AutoTrainDesc>Auto train increases training level.</AT.AutoTrainDesc>
+</LanguageData>

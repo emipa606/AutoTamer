@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Auto tamer -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>AT_Autotamer</defName>
+    <label>Auto tamer</label>
+    <description>A Highly advanced nano-machine assembly platform that persuades the thoughts of creatures' primitive brains to prevent animals from increasing wildness levels and having them run feral. The harmonics can also Tune to a form that targets a single random animal and passively trains them by one level each day.</description>
+    <graphicData>
+      <texPath>Things/Buildings/AutoTamer</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(6,6)</drawSize>
+      <shadowData>
+        <volume>(3.76, 0.5, 3.66)</volume>
+        <offset>(0,0,-0.05)</offset>
+      </shadowData>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <size>(4,4)</size>
+    <rotatable>false</rotatable>
+    <passability>Impassable</passability>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <blockWind>true</blockWind>
+    <fillPercent>1</fillPercent>
+    <blockLight>true</blockLight>
+    <canOverlapZones>false</canOverlapZones>
+    <designationCategory>Misc</designationCategory>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <costList>
+      <Steel>120</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <ComponentSpacer>4</ComponentSpacer>
+      <Plasteel>20</Plasteel>
+    </costList>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <statBases>
+      <WorkToBuild>16000</WorkToBuild>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Mass>100</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <building>
+      <destroySound>BuildingDestroyed_Metal_Big</destroySound>
+    </building>
+    <researchPrerequisites>
+      <li>GroundPenetratingScanner</li>
+      <li>VitalsMonitor</li>
+      <li>Fabrication</li>
+    </researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>true</shortCircuitInRain>
+        <basePowerConsumption>450</basePowerConsumption>
+        <soundAmbientPowered>GeothermalPlant_Ambience</soundAmbientPowered>
+      </li>
+      <li Class="CompProperties_Breakdownable" />
+      <li Class="CompProperties_Flickable" />
+      <li Class="AutoTame.CompProperties_AutoTameTrain">
+        <radius>35</radius>
+      </li>
+    </comps>
+    <specialDisplayRadius>35</specialDisplayRadius>
+  </ThingDef>
+</Defs>
