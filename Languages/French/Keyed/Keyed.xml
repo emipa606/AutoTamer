@@ -5,4 +5,6 @@
   <AT.AutoTrain>Train automobile</AT.AutoTrain>
   <AT.AutoTameDesc>L'apprivoisement automatique empêche la dégradation de la formation.</AT.AutoTameDesc>
   <AT.AutoTrainDesc>La formation automatique augmente le niveau de formation.</AT.AutoTrainDesc>
+  <AT.TrainInterval>La formation se déroule avec un intervalle de {0}</AT.TrainInterval>
+  <AT.CurrentModVersion>Version installée du mod : {0}</AT.CurrentModVersion>
 </LanguageData>

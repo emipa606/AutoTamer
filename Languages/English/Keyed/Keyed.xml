@@ -4,4 +4,6 @@
   <AT.AutoTrain>Auto train</AT.AutoTrain>
   <AT.AutoTameDesc>Auto tame prevents training decay.</AT.AutoTameDesc>
   <AT.AutoTrainDesc>Auto train increases training level.</AT.AutoTrainDesc>
+  <AT.TrainInterval>Training happens with an interval of {0}</AT.TrainInterval>
+  <AT.CurrentModVersion>Installed mod-version: {0}</AT.CurrentModVersion>
 </LanguageData>

@@ -9,7 +9,7 @@ namespace AutoTame;
 
 public class CompAutoTameTrain : ThingComp
 {
-    public static readonly HashSet<CompAutoTameTrain> comps = new HashSet<CompAutoTameTrain>();
+    public static readonly HashSet<CompAutoTameTrain> comps = [];
     public bool autoTame;
     public bool autoTrain;
     public CompPowerTrader compPower;
@@ -86,7 +86,8 @@ public class CompAutoTameTrain : ThingComp
     public override void CompTick()
     {
         base.CompTick();
-        if (autoTrain && compPower.PowerOn && Find.TickManager.TicksGame % 60000 == 0)
+        if (autoTrain && compPower.PowerOn &&
+            Find.TickManager.TicksGame % AutoTameMod.instance.Settings.TrainInterval == 0)
         {
             if (GenRadial.RadialDistinctThingsAround(parent.Position, parent.Map, Props.radius, true)
                 .OfType<Pawn>().Where(x => x.RaceProps.Animal && x.Faction == parent.Faction

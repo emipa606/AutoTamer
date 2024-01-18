@@ -5,4 +5,6 @@
   <AT.AutoTrain>Autozug</AT.AutoTrain>
   <AT.AutoTameDesc>Automatische Zähmung verhindert Trainingsrückgang.</AT.AutoTameDesc>
   <AT.AutoTrainDesc>Automatisches Training erhöht das Trainingsniveau.</AT.AutoTrainDesc>
+  <AT.TrainInterval>Die Ausbildung erfolgt mit einem Intervall von {0}</AT.TrainInterval>
+  <AT.CurrentModVersion>Installierte Mod-Version: {0}</AT.CurrentModVersion>
 </LanguageData>

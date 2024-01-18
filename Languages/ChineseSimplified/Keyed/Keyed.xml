@@ -5,4 +5,6 @@
   <AT.AutoTrain>自动列车</AT.AutoTrain>
   <AT.AutoTameDesc>自动驯服可以防止训练的衰落。</AT.AutoTameDesc>
   <AT.AutoTrainDesc>自动训练增加训练水平。</AT.AutoTrainDesc>
+  <AT.TrainInterval>训练间隔为 {0}</AT.TrainInterval>
+  <AT.CurrentModVersion>已安装模块版本：{0}</AT.CurrentModVersion>
 </LanguageData>

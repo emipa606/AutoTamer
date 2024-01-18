@@ -5,4 +5,6 @@
   <AT.AutoTrain>Автопоезд</AT.AutoTrain>
   <AT.AutoTameDesc>Автоматическое приручение предотвращает затухание процесса обучения.</AT.AutoTameDesc>
   <AT.AutoTrainDesc>Автотренировка повышает уровень тренировки.</AT.AutoTrainDesc>
+  <AT.TrainInterval>Обучение происходит с интервалом {0}</AT.TrainInterval>
+  <AT.CurrentModVersion>Установленная версия мода: {0}</AT.CurrentModVersion>
 </LanguageData>
