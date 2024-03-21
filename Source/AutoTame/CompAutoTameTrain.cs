@@ -65,7 +65,7 @@ public class CompAutoTameTrain : ThingComp
         if (parent.Spawned && parent.Map != null &&
             Traverse.Create(parent.Map.mapDrawer).Field("sections").GetValue() != null)
         {
-            parent.Map.mapDrawer.MapMeshDirty(parent.Position, MapMeshFlag.Things);
+            parent.Map.mapDrawer.MapMeshDirty(parent.Position, MapMeshFlagDefOf.Things);
         }
 
         curGraphicPath = texPath;
