@@ -12,7 +12,7 @@ internal class AutoTameMod : Mod
     /// <summary>
     ///     The instance of the settings to be read by the mod
     /// </summary>
-    public static AutoTameMod instance;
+    public static AutoTameMod Instance;
 
     private static string currentVersion;
 
@@ -22,7 +22,7 @@ internal class AutoTameMod : Mod
     /// <param name="content"></param>
     public AutoTameMod(ModContentPack content) : base(content)
     {
-        instance = this;
+        Instance = this;
         Settings = GetSettings<AutoTameSettings>();
         currentVersion = VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
     }
@@ -48,21 +48,21 @@ internal class AutoTameMod : Mod
     /// <param name="rect"></param>
     public override void DoSettingsWindowContents(Rect rect)
     {
-        var listing_Standard = new Listing_Standard();
-        listing_Standard.Begin(rect);
-        listing_Standard.Gap();
-        Settings.TrainInterval = (int)Math.Round(listing_Standard.SliderLabeled(
+        var listingStandard = new Listing_Standard();
+        listingStandard.Begin(rect);
+        listingStandard.Gap();
+        Settings.TrainInterval = (int)Math.Round(listingStandard.SliderLabeled(
             "AT.TrainInterval".Translate(Settings.TrainInterval.ToStringTicksToPeriod()),
             Settings.TrainInterval, GenTicks.TickLongInterval, GenDate.TicksPerTwelfth));
 
         if (currentVersion != null)
         {
-            listing_Standard.Gap();
+            listingStandard.Gap();
             GUI.contentColor = Color.gray;
-            listing_Standard.Label("AT.CurrentModVersion".Translate(currentVersion));
+            listingStandard.Label("AT.CurrentModVersion".Translate(currentVersion));
             GUI.contentColor = Color.white;
         }
 
-        listing_Standard.End();
+        listingStandard.End();
     }
 }

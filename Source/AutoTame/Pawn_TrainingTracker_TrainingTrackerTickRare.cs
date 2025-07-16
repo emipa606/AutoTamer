@@ -7,14 +7,14 @@ using Verse;
 
 namespace AutoTame;
 
-[HarmonyPatch(typeof(Pawn_TrainingTracker), "TrainingTrackerTickRare")]
-public class TrainingTrackerTickRare_Patch
+[HarmonyPatch(typeof(Pawn_TrainingTracker), nameof(Pawn_TrainingTracker.TrainingTrackerTickRare))]
+public class Pawn_TrainingTracker_TrainingTrackerTickRare
 {
     public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator ilg)
     {
-        var shouldSkip = AccessTools.Method(typeof(Startup), "AnimalShouldNotUntame");
-        var pawnField = AccessTools.Field(typeof(Pawn_TrainingTracker), "pawn");
-        var animalTypeField = AccessTools.Field(typeof(RaceProperties), "animalType");
+        var shouldSkip = AccessTools.Method(typeof(Startup), nameof(Startup.AnimalShouldNotUntame));
+        var pawnField = AccessTools.Field(typeof(Pawn_TrainingTracker), nameof(Pawn_TrainingTracker.pawn));
+        var animalTypeField = AccessTools.Field(typeof(RaceProperties), nameof(RaceProperties.animalType));
 
         var codes = instructions.ToList();
         var label = ilg.DefineLabel();

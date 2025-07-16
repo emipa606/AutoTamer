@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Auto Tamer</name>
   <author>Halituis Amaricanous</author>
@@ -8,7 +8,7 @@
     <li>1.3</li>
   </supportedVersions>
   <packageId>HalituisAmaricanous.AT</packageId>
-  <description>Adds new Spacer building that &lt;b&gt;&lt;color=#FF9933&gt;Prevents Increasing wildness&lt;/color&gt;&lt;/b&gt; or toggled to &lt;b&gt;&lt;color=#FF9933&gt;Passively train a single random animal.&lt;/color&gt;&lt;/b&gt; usefull if you have too many animals.</description>
+  <description>Adds new Spacer building that &lt;b>&lt;color=#FF9933>Prevents Increasing wildness&lt;/color>&lt;/b> or toggled to &lt;b>&lt;color=#FF9933>Passively train a single random animal.&lt;/color>&lt;/b> usefull if you have too many animals.</description>
   <loadAfter>
     <li>Ludeon.RimWorld</li>
     <li>Ludeon.RimWorld.Royalty</li>

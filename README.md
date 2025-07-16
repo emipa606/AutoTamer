@@ -1,4 +1,4 @@
-# AutoTamer
+# [Auto Tamer (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=2900667470)
 
 ![Image](https://i.imgur.com/buuPQel.png)
 
@@ -6,7 +6,6 @@ Update of Halituis Amaricanouss mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2794149715
 
 ![Image](https://i.imgur.com/pufA0kM.png)
-
 	
 ![Image](https://i.imgur.com/Z4GOv8H.png)
 
@@ -32,7 +31,7 @@ The Auto train toggle selects a random animal to train up, it can pick an availa
 Mod was created- well actually none of the partys are private so...
 
 
--  ART: Monti @ https://steamcommunity.com/id/montyi/] Monti
+-  ART: Monti @ [ Monti](https://steamcommunity.com/id/montyi/)
 -  XML: Halitius Amaricanous
 -  C#: Taranchuk
 -  and you: for hopefully downloading and leaving a review, be it positive or negative.
@@ -44,13 +43,12 @@ Mod was created- well actually none of the partys are private so...
 
 -  See if the the error persists if you just have this mod and its requirements active.
 -  If not, try adding your other mods until it happens again.
--  Post your error-log using https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib or the standalone https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404]Uploader and command Ctrl+F12
+-  Post your error-log using the [Log Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) or the standalone [Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) and command Ctrl+F12
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
--  Use https://github.com/RimSort/RimSort/releases/latest]RimSort to sort your mods
+-  Use [RimSort](https://github.com/RimSort/RimSort/releases/latest) to sort your mods
 
+ 
 
-
-https://steamcommunity.com/sharedfiles/filedetails/changelog/2900667470]![Image](https://img.shields.io/github/v/release/emipa606/AutoTamer?label=latest%20version&style=plastic&color=9f1111&labelColor=black)
-
+[![Image](https://img.shields.io/github/v/release/emipa606/AutoTamer?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2900667470) | tags:  training,  automation

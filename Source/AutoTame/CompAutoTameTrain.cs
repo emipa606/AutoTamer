@@ -10,41 +10,41 @@ namespace AutoTame;
 public class CompAutoTameTrain : ThingComp
 {
     public static readonly HashSet<CompAutoTameTrain> comps = [];
-    public bool autoTame;
-    public bool autoTrain;
-    public CompPowerTrader compPower;
-    public string curGraphicPath;
-    public CompProperties_AutoTameTrain Props => props as CompProperties_AutoTameTrain;
+    private bool autoTame;
+    private bool autoTrain;
+    private CompPowerTrader compPower;
+    private string curGraphicPath;
+    private CompProperties_AutoTameTrain Props => props as CompProperties_AutoTameTrain;
 
     public override void PostSpawnSetup(bool respawningAfterLoad)
     {
         base.PostSpawnSetup(respawningAfterLoad);
         compPower = parent.TryGetComp<CompPowerTrader>();
         comps.Add(this);
-        LongEventHandler.ExecuteWhenFinished(SetGraphic);
+        LongEventHandler.ExecuteWhenFinished(setGraphic);
     }
 
-    public void SetGraphic()
+    private void setGraphic()
     {
         if (!compPower.PowerOn)
         {
-            TryChangeGraphic($"{parent.def.graphicData.texPath}_Off");
+            tryChangeGraphic($"{parent.def.graphicData.texPath}_Off");
         }
         else if (autoTame)
         {
-            TryChangeGraphic($"{parent.def.graphicData.texPath}_A");
+            tryChangeGraphic($"{parent.def.graphicData.texPath}_A");
         }
         else if (autoTrain)
         {
-            TryChangeGraphic($"{parent.def.graphicData.texPath}_B");
+            tryChangeGraphic($"{parent.def.graphicData.texPath}_B");
         }
         else if (compPower.PowerOn)
         {
-            TryChangeGraphic(parent.def.graphicData.texPath);
+            tryChangeGraphic(parent.def.graphicData.texPath);
         }
     }
 
-    public void TryChangeGraphic(string texPath)
+    private void tryChangeGraphic(string texPath)
     {
         if (texPath == curGraphicPath)
         {
@@ -71,9 +71,9 @@ public class CompAutoTameTrain : ThingComp
         curGraphicPath = texPath;
     }
 
-    public override void PostDeSpawn(Map map)
+    public override void PostDeSpawn(Map map, DestroyMode mode = DestroyMode.Vanish)
     {
-        base.PostDeSpawn(map);
+        base.PostDeSpawn(map, mode);
         comps.Remove(this);
     }
 
@@ -87,7 +87,7 @@ public class CompAutoTameTrain : ThingComp
     {
         base.CompTick();
         if (autoTrain && compPower.PowerOn &&
-            Find.TickManager.TicksGame % AutoTameMod.instance.Settings.TrainInterval == 0)
+            Find.TickManager.TicksGame % AutoTameMod.Instance.Settings.TrainInterval == 0)
         {
             if (GenRadial.RadialDistinctThingsAround(parent.Position, parent.Map, Props.radius, true)
                 .OfType<Pawn>().Where(x => x.RaceProps.Animal && x.Faction == parent.Faction
@@ -99,7 +99,7 @@ public class CompAutoTameTrain : ThingComp
             }
         }
 
-        SetGraphic();
+        setGraphic();
     }
 
     public bool PreventsUntaming(Pawn animal)
@@ -127,7 +127,7 @@ public class CompAutoTameTrain : ThingComp
                     autoTrain = false;
                 }
 
-                SetGraphic();
+                setGraphic();
             },
             isActive = () => autoTame
         };
@@ -145,7 +145,7 @@ public class CompAutoTameTrain : ThingComp
                     autoTame = false;
                 }
 
-                SetGraphic();
+                setGraphic();
             },
             isActive = () => autoTrain
         };
