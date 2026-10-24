@@ -1,32 +1,32 @@
 # [Auto Tamer (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=2900667470)
 
-![Image](https://i.imgur.com/buuPQel.png)
+![Image](https://img.litet.net/logos/Info.png)
 
 Update of Halituis Amaricanouss mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2794149715
 
-![Image](https://i.imgur.com/pufA0kM.png)
+![Image](https://img.litet.net/logos/Notice.png)
 	
-![Image](https://i.imgur.com/Z4GOv8H.png)
+![Image](https://img.litet.net/logos/OriginalDescription.png)
 
-![Image](https://imgur.com/1Wmirsv.png)
+![Image](https://img.litet.net/1Wmirsv.png)
 
 Adds a machine that keeps animals tame and trains them automatically.
 
-![Image](https://imgur.com/QXvd4a5.png)
+![Image](https://img.litet.net/QXvd4a5.png)
 
 This advanced Spacer machine can be built by completing the research for Ground Penetrating Scanner, Vitals Monitors, and Fabrication. The objective of the machine is to have a building that keeps your animals tame while your pawns do more important things. It should be noted that you can select a toggle that allows the machine to keep animals tame or to train animals up.
 
-![Image](https://imgur.com/nfOtKab.png)
+![Image](https://img.litet.net/nfOtKab.png)
 
 The Auto tame toggle keeps all of your tamed animals within its radius tame for as long as the machine has power. this can free up a lot of your pawns time if you have lots of animals and need to waste hours on animal upkeep.
 
-![Image](https://imgur.com/fHjRLoa.png)
+![Image](https://img.litet.net/fHjRLoa.png)
 
 The Auto train toggle selects a random animal to train up, it can pick an available slot the animal can be trained in. It should be noted the machine only trains one animal at a time.
 
 
-![Image](https://imgur.com/jRpzgbS.png)
+![Image](https://img.litet.net/jRpzgbS.png)
 
 Mod was created- well actually none of the partys are private so...
 
@@ -37,13 +37,13 @@ Mod was created- well actually none of the partys are private so...
 -  and you: for hopefully downloading and leaving a review, be it positive or negative.
 
 	
-![Image](https://i.imgur.com/PwoNOj4.png)
+![Image](https://img.litet.net/logos/ReportingIssues.png)
 
 
 
 -  See if the the error persists if you just have this mod and its requirements active.
 -  If not, try adding your other mods until it happens again.
--  Post your error-log using the [Log Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) or the standalone [Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) and command Ctrl+F12
+-  Always post your log using the [Log Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404)
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
@@ -51,4 +51,4 @@ Mod was created- well actually none of the partys are private so...
 
  
 
-[![Image](https://img.shields.io/github/v/release/emipa606/AutoTamer?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2900667470) | tags:  training,  automation
+[![Image](https://img.shields.io/github/v/release/emipa606/AutoTamer?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2900667470) | automation, training

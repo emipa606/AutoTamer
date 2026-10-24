@@ -87,16 +87,14 @@ public class CompAutoTameTrain : ThingComp
     {
         base.CompTick();
         if (autoTrain && compPower.PowerOn &&
-            Find.TickManager.TicksGame % AutoTameMod.Instance.Settings.TrainInterval == 0)
-        {
-            if (GenRadial.RadialDistinctThingsAround(parent.Position, parent.Map, Props.radius, true)
+            Find.TickManager.TicksGame % AutoTameMod.Instance.Settings.TrainInterval == 0 &&
+            GenRadial.RadialDistinctThingsAround(parent.Position, parent.Map, Props.radius, true)
                 .OfType<Pawn>().Where(x => x.RaceProps.Animal && x.Faction == parent.Faction
                                                               && x.training?.NextTrainableToTrain() != null)
                 .TryRandomElement(out var animal))
-            {
-                var trainable = animal.training.NextTrainableToTrain();
-                animal.training.Train(trainable, null);
-            }
+        {
+            var trainable = animal.training.NextTrainableToTrain();
+            animal.training.Train(trainable, null);
         }
 
         setGraphic();

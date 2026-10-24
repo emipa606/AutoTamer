@@ -1,39 +1,63 @@
-# Copilot Instructions for RimWorld Modding Project: AutoTame
+# GitHub Copilot Instructions for Auto Tamer (Continued) Mod
 
 ## Mod Overview and Purpose
 
-The "AutoTame" mod for RimWorld is designed to automate the taming and training of animals. Developed in C#, the mod streamlines an otherwise manual aspect of gameplay, allowing players to focus on other strategic elements. By integrating seamlessly with existing game mechanics, this mod enhances the player's experience by providing a more efficient way to manage animal husbandry.
+Auto Tamer (Continued) is an update and continuation of Halituis Amaricanous' original Auto Tamer mod. The primary purpose of this mod is to introduce an advanced Spacer machine that automatically keeps your colony's animals tame and trains them. This machine can be built by researching Ground Penetrating Scanner, Vitals Monitors, and Fabrication. The objective of the machine is to free up your colony's pawns from the time-consuming task of animal upkeep, allowing them to focus on more important tasks.
 
 ## Key Features and Systems
 
-- **Automated Taming:** Animals can be set to automatically tame themselves when certain conditions are met, removing the need for constant player intervention.
-- **Training Management:** Once tame, animals continue to train towards various tasks automatically, optimizing your colony's workforce.
-- **Dynamic Graphics:** The mod includes functionality to dynamically change animal graphics, reflecting their trained or tame status in-game.
-- **Gameplay Integrity:** The design carefully ensures that the automation does not disrupt the balance of the game, maintaining a fair challenge.
+The Auto Tamer (Continued) mod has two main toggles:
+
+1. **Auto Tame**: Keeps all tamed animals within the machine's radius tame for as long as it has power. This feature is beneficial if you have a large number of animals and want to reduce the amount of time spent on animal upkeep.
+2. **Auto Train**: Selects a random animal to train up. The machine can pick an available slot for the animal to be trained in. It should be noted that the machine only trains one animal at a time.
 
 ## Coding Patterns and Conventions
 
-- **Class Naming:** Follow a clear and consistent pattern for class naming. For example, `AutoTameMod` for mod initialization, `AutoTameSettings` for settings management, etc.
-- **Method Naming:** Use verbs for method names to clearly indicate functionality, such as `SetGraphic`, `TryChangeGraphic`, and `PreventsUntaming`.
-- **Access Modifiers:** Use `internal` for mod-specific classes and `public` for classes that need broader accessibility. Methods should match the intended scope of use.
-- **Consistent Indentation and Bracing:** Stick to a C# standard of four spaces for indentation and use braces `{}` for every block, even if it contains a single statement.
+The Auto Tamer (Continued) mod follows a structured coding pattern that adheres to the conventions of RimWorld modding:
+
+- **Namespaces and Classes**: All C# files are organized into namespaces and classes. For example, the `AutoTameMod` class is defined in the `AutoTame` namespace.
+- **XML Defs**: XML files contain definitions for game objects and their properties. For example, the `AutoTamer.xml` file defines the properties of the Auto Tamer machine.
+- **Harmony Patching**: The mod uses the Harmony patching framework to modify the behavior of RimWorld's core code. Harmony patches are defined in the C# files.
 
 ## XML Integration
 
-The mod's XML files should maintain compatibility with RimWorld's def system. Define XML files for custom comp properties (`CompProperties_AutoTameTrain`) that attach to in-game elements. It’s critical to ensure that XML files align with RimWorld's schema to avoid runtime errors.
+The Auto Tamer (Continued) mod integrates XML definitions to define the properties of the Auto Tamer machine. These XML files are located in the `Defs` folder of the mod. Here are the key XML files:
+
+- **AutoTamer.xml**: Defines the properties of the Auto Tamer machine, including its graphic, size, and construction requirements.
+- **About.xml**: Provides information about the mod, such as its name, author, and description.
+- **TranslationTemplate.xml**: Contains translation templates for the mod.
 
 ## Harmony Patching
 
-- **Usage:** The mod uses Harmony library to patch existing game methods, allowing for the seamless integration of new features without modifying vanilla game files.
-- **Patch Classes:** The `TrainingTrackerTickRare_Patch` is a practical example, targeting infrequent training ticks to hook into the taming process.
-- **Best Practices:** Use Harmony’s annotation system (`[HarmonyPatch]`) to specify target methods cleanly and efficiently. Always implement robust exception handling around patches to maintain game stability.
+The Auto Tamer (Continued) mod uses Harmony patching to modify the behavior of RimWorld's core code. Here are the key Harmony patches defined in the mod:
+
+- **Pawn_TrainingTracker_TrainingTrackerTickRare.cs**: Contains a transpiler patch that modifies the behavior of the `TrainingTrackerTickRare` method in the `Pawn_TrainingTracker` class.
 
 ## Suggestions for Copilot
 
-1. **Class and Method Prediction:** Use Copilot to generate repetitive patterns, such as boilerplate code for new mods, preserving the class and method naming conventions.
-2. **XML Definition Templates:** Employ Copilot to assist in writing repetitive XML structures or discovering common mistakes in def XML files by suggesting improvements.
-3. **Refactor Suggestions:** Identify and optimize loops or conditionals within methods like `TryChangeGraphic` to enhance code efficiency.
-4. **Patch Targeting:** Help with writing Harmony patches by suggesting methods that can be overridden or augmented, especially those not immediately obvious.
-5. **Exception Handling:** Ensure all patched methods include Copilot-recommended exception handling for better debugging and game stability.
+When using GitHub Copilot with the Auto Tamer (Continued) mod, consider the following suggestions:
 
-By following these outlined practices and leveraging GitHub Copilot effectively, team members can maintain a high standard of code quality and mod performance akin to professional game development standards.
+- **Familiarize yourself with the mod's codebase**: Before using Copilot, make sure you understand the mod's codebase, including the C# and XML files.
+- **Use Copilot for code snippets**: Copilot can be a great tool for generating code snippets for new features or bug fixes. However, always review the generated code to ensure it fits the mod's coding conventions.
+- **Use Copilot for XML defs**: Copilot can also generate XML definitions for new game objects. However, always review the generated XML to ensure it follows the mod's XML conventions.
+- **Test thoroughly**: After using Copilot to generate code or XML, always test the mod thoroughly to ensure it works as intended.
+
+## Conclusion
+
+The Auto Tamer (Continued) mod is a useful tool for automating animal upkeep and training in RimWorld. By following the coding patterns and conventions used in the mod, and using GitHub Copilot to generate code snippets and XML defs, you can contribute to the continued development and success of the mod.
+
+## Project Solution Guidelines
+- Relevant mod XML files are included as Solution Items under the solution folder named XML, these can be read and modified from within the solution.
+- Use these in-solution XML files as the primary files for reference and modification.
+- The `.github/copilot-instructions.md` file is included in the solution under the `.github` solution folder, so it should be read/modified from within the solution instead of using paths outside the solution. Update this file once only, as it and the parent-path solution reference point to the same file in this workspace.
+- When making functional changes in this mod, ensure the documented features stay in sync with implementation; use the in-solution `.github` copy as the primary file.
+- In the solution is also a project called Assembly-CSharp, containing a read-only version of the decompiled game source, for reference and debugging purposes.
+- For any new documentation, update this copilot-instructions.md file rather than creating separate documentation files.
+
+
+## Hard rules (must follow)
+- Do NOT run commands that modify the repo (no git commit, git apply, dotnet format) unless explicitly asked.
+- Prefer minimal reads: read only the smallest code region needed (around the suspicious lines).
+- When mentioning SonarQube issues, automatically use the SonarQube MCP service to fetch and address issues instead of making inferred fixes without querying SonarQube first.
+- When mentioning the rimworld log, automatically use the Rimworld MCP service to fetch the log.
+

@@ -8,7 +8,7 @@ using Verse;
 namespace AutoTame;
 
 [HarmonyPatch(typeof(Pawn_TrainingTracker), nameof(Pawn_TrainingTracker.TrainingTrackerTickRare))]
-public class Pawn_TrainingTracker_TrainingTrackerTickRare
+public static class Pawn_TrainingTracker_TrainingTrackerTickRare
 {
     public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator ilg)
     {
